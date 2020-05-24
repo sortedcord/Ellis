@@ -1,0 +1,23 @@
+    if mic_mode:
+        cchange = take_voice_input()
+    else:
+        cchange = input("You: ")
+
+    while 1 < 2:
+        # If the response to input is 'yes'
+        if cchange == "yes" or cchange == "yeah":
+            say("What is the new city?")
+            if mic_mode:
+                sword = "New city"
+                cchange = take_voice_input(sword)
+            else:
+                cchange = input("New city : ")
+
+        elif cchange == "no" or cchange == "nope":
+            say("Okay!")
+            break
+        else:
+            # If there is a wrong input, you will have to enter with your keyboard to save time!
+            say("Wrong Input. Please enter with your keyboard!")
+            cchange = input("You: ")
+            continue
